@@ -16,6 +16,7 @@ class MainController extends Controller
 
         return view("dashboard", ["posts" => $posts]);
     }
+
     public function createPost() {
         //Gate:
         if (Gate::denies("post.create")) {
@@ -24,6 +25,7 @@ class MainController extends Controller
 
         echo "Create Post!";
     }
+    
     public function deletePost($id) {
 
         $post = Post::find($id);
