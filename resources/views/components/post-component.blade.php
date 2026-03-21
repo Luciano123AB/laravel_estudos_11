@@ -1,6 +1,7 @@
 <div class="mt-3">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        {{-- <div class="bg-white bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg"> --}}
+        <div class="{{ Auth::user()->id === $post->user_id ? "bg-blue-200" : "bg-white"}} bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 text-gray-900 text-gray-100">
                 <div class="flex justify-between">
                     <div>

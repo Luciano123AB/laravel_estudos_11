@@ -33,6 +33,9 @@ class MainController extends Controller
             abort(403, "Você não tem permissão para eliminar um post.");
         }
 
-        echo "Delete Post!";
+        //Delete the post:
+        $post->delete();
+
+        return redirect()->route("dashboard");
     }
 }
