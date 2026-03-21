@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 text-gray-200 leading-tight">
             NEW POST
         </h2>
     </x-slot>
@@ -10,7 +10,7 @@
             @csrf
 
             <div class="mb-3">
-                <label for="title" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Title</label>
+                <label for="title" class="block text-sm font-medium text-gray-700 text-gray-200">Title</label>
                 <input type="text" name="title" id="title" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                 @error("title")
                     <div class="text-red-500">{{ $message }}</div>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="content" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Content of the post</label>
+                <label for="content" class="block text-sm font-medium text-gray-700 text-gray-200">Content of the post</label>
                 <textarea name="content" id="content" rows="5" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
                 @error("content")
                     <div class="text-red-500">{{ $message }}</div>
